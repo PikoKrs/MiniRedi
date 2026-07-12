@@ -14,6 +14,11 @@ public class CacheConfig {
         this.cleanupIntervalSeconds = b.cleanupIntervalSeconds;
     }
 
+    public int getMaxSize()              { return maxSize; }
+    public long getDefaultTtlSeconds()   { return defaultTtlSeconds; }
+    public EvictionPolicy getEvictionPolicy() { return evictionPolicy; }
+    public long getCleanupIntervalSeconds()   { return cleanupIntervalSeconds; }
+
     public static Builder builder() { return new Builder(); }
 
     public static class Builder {
